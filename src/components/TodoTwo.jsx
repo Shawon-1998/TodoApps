@@ -66,13 +66,12 @@ const TodoTwo = () => {
   }, [])
 
   const handleDelete = (id) => {
-
     const db = getDatabase();
     const todoRef = ref(db, 'TodoList/' + id)
     remove(todoRef)
   }
   
-  const handleEdit = (e ,id,value) => {
+  const handleEdit = (e, id, value) => {
     e.preventDefault()
     setEdit(!edit)
     setId(id)

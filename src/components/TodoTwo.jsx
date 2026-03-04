@@ -80,7 +80,7 @@ const TodoTwo = () => {
 
   return (
     <>
-      <form className="rounded-2xl w-100 mx-auto bg-purple-700 py-5">
+      <form className="rounded-2xl w-100 mx-auto bg-cyan-500 py-5">
         <h1 className='text-2xl text-white text-center'>Todo list</h1>
         <div className="my-3 px-5">
           <label htmlFor="text" className="block mb-2.5 text-lg font-lg text-heading"></label>
@@ -99,7 +99,7 @@ const TodoTwo = () => {
           {
             array.map((item) => {
               return (
-                <li className='px-5 flex justify-between bg-gray-900 text-white'>
+                <li key={item.id} className='px-5 flex justify-between bg-gray-900 text-white'>
                   {item.value.TodoName}
                   <div className='flex gap-4'>
                     <button className='text-2xl text-green-400' type='submit' onClick={()=>handleEdit(item.value.TodoName,item.id)}>
